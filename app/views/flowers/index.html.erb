@@ -19,6 +19,6 @@
         <br/>
     <% end %>
 
-    <%# <a href="<%= new_flower_path " type="button" class="btn btn-primary">Creer un nouvel article</a> %>
-    <%= link_to "Créer un nouvel article", new_flower_path if policy(Flower).new? %>
+    <a href="<%= new_flower_path %>" type="button" class="btn btn-primary">Creer un nouvel article</a>
+
 </div>

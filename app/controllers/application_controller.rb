@@ -2,13 +2,5 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   after_action :create_cart_and_assign_to_current_user, only: [:create]
 
-  before_action :authenticate_user!
-  include Pundit::Authorization
 
-  after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-
-  def skip_pundit?
-    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
-  end
 end

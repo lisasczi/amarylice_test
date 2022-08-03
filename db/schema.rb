@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_03_124007) do
+ActiveRecord::Schema.define(version: 2022_08_03_161615) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,20 @@ ActiveRecord::Schema.define(version: 2022_08_03_124007) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
+
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.integer "resource_id"
+    t.string "author_type"
+    t.integer "author_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -42,12 +56,12 @@ ActiveRecord::Schema.define(version: 2022_08_03_124007) do
 
   create_table "join_table_flowers_carts", force: :cascade do |t|
     t.integer "cart_id", null: false
-    t.integer "flowers_id", null: false
+    t.integer "flower_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "quantity"
     t.index ["cart_id"], name: "index_join_table_flowers_carts_on_cart_id"
-    t.index ["flowers_id"], name: "index_join_table_flowers_carts_on_flowers_id"
+    t.index ["flower_id"], name: "index_join_table_flowers_carts_on_flower_id"
   end
 
   create_table "join_table_flowers_orders", force: :cascade do |t|
@@ -74,6 +88,7 @@ ActiveRecord::Schema.define(version: 2022_08_03_124007) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -81,7 +96,7 @@ ActiveRecord::Schema.define(version: 2022_08_03_124007) do
   add_foreign_key "accounts", "users"
   add_foreign_key "carts", "users"
   add_foreign_key "join_table_flowers_carts", "carts"
-  add_foreign_key "join_table_flowers_carts", "flowers", column: "flowers_id"
+  add_foreign_key "join_table_flowers_carts", "flowers"
   add_foreign_key "join_table_flowers_orders", "flowers"
   add_foreign_key "join_table_flowers_orders", "orders"
   add_foreign_key "orders", "carts"
