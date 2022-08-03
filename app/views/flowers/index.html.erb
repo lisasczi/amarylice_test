@@ -1,0 +1,24 @@
+<h1>coucou flowers index</h1>
+
+<br/>
+<div class="container">
+    <h1>Toutes nos fleurs :</h1>
+    <br/>
+    <br/>
+    <br/>
+
+    <% @flowers.each do |flower| %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= flower.name %></h5>
+                <p class="card-text"><%= flower.description %></p>
+                <p class="card-text"><%= flower.price %>€</p>
+                <a href="<%= flower_path(flower.id) %>" class="card-link">En savoir plus</a>
+            </div>
+        </div>
+        <br/>
+    <% end %>
+
+    <%# <a href="<%= new_flower_path " type="button" class="btn btn-primary">Creer un nouvel article</a> %>
+    <%= link_to "Créer un nouvel article", new_flower_path if policy(Flower).new? %>
+</div>
