@@ -1,9 +1,12 @@
 class FlowersController < ApplicationController
+  include FlowersHelper
+  before_action :save_flowers_in_cart
   before_action :set_flower, only: [:update, :edit, :show, :destroy ]
 
 
   def index
     @flowers = Flower.all
+    @join_table_flower_cart = JoinTableFlowersCart.new
   end
 
   def show

@@ -1,0 +1,48 @@
+<h1>coucou cart show</h1>
+
+<br/>
+<div class="container">
+    <h1>Mon panier</h1>
+    <br/>
+    <br/>
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Nom de produit</th>
+                        <th scope="col">Prix unitaire</th>
+                        <th scope="col">Prix selon quantité</th>
+                        <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% total_price = [] %>
+                        <%  @flowers_in_cart.each do |flower| %>
+                            <tr>
+                            <th scope="row"><%= flower.quantity %></th>
+                            <td><%= flower.flower.name %></td>
+                            <td><%= flower.flower.price %>€</td>
+                            <td><%= total_flower = flower.flower.price*flower.quantity.to_d %>€</td>
+                            <% total_price << total_flower %>
+                            </tr>
+                        <% end %>
+                         <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td class="font-weight-bold">Prix total:</td>
+                            <td><%= total_price.inject(0){|sum,x| sum + x }%>€</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>

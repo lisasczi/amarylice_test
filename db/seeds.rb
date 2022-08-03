@@ -23,3 +23,15 @@ tournesol_flower = Flower.create!(
   description: "si vous ne savez pas où est le soleil...",
   price: 2.50
 )
+
+essaie = JoinTableFlowersCart.create!(
+  flower_id: 1,
+  cart_id: 1,
+  quantity: 1
+)
+
+essaies = JoinTableFlowersCart.create!(
+  flower_id: 2,
+  cart_id: 1,
+  quantity: 2
+)

@@ -23,7 +23,17 @@
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     </span>
     <span class="navbar-text nav-link">
-    <%= link_to "Mon panier", flowers_path %>
+      <%= link_to "Mon panier", cart_path(current_user.cart.id) %>
+        <% if @flowers_in_cart.count > 0 %>
+            <% total_flowers = []
+              @flowers_in_cart.each do |flower_choosed|
+                  flower_quantity = flower_choosed.quantity
+                  total_flowers << flower_quantity
+              end %>
+            <span class="badge badge-pill badge-info"><%= total_flowers.inject(0){|sum,x| sum + x }%></span>
+        <% else %>
+            <span class="badge badge-pill badge-info">0</span>
+          <% end %>
     </span>
     <% else %>
     <span class="navbar-text nav-link">
