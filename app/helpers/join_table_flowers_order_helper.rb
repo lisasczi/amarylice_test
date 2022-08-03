@@ -1,0 +1,2 @@
+module JoinTableFlowersOrderHelper
+end

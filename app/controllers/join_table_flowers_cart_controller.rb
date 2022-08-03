@@ -1,0 +1,2 @@
+class JoinTableFlowersCartController < ApplicationController
+end
