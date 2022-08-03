@@ -1,4 +1,4 @@
 class JoinTableFlowersCart < ApplicationRecord
   belongs_to :cart
-  belongs_to :flowers
+  belongs_to :flower
 end

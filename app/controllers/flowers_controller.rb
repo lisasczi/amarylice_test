@@ -3,41 +3,35 @@ class FlowersController < ApplicationController
 
 
   def index
-    @flower = policy_scope(Flower)
-    authorize @flower
     @flowers = Flower.all
   end
 
   def show
-    # @flower= Flower.find(params[:id])
   end
 
   def new
-    authorize @flower
     @flower = Flower.new
   end
 
   def create
-    authorize @flower
     flower = Flower.create(flower_params)
     redirect_to flower_path(flower.id)
+    # if @flower.save
+    #   redirect_to flowers_path
+    # else
+    #   render :new
+    # end
   end
 
   def edit
-    authorize @flower
-    # @flower= Flower.find(params[:id])
   end
 
   def update
-    authorize @flower
-    # @flower = Flower.find(params[:id])
     @flower.update(flower_params)
     redirect_to flower_path(@flower.id)
   end
 
   def destroy
-    authorize @flower
-    # @flower= Flower.find(params[:id])
     @flower.destroy
     redirect_to root_path
   end
