@@ -1,5 +1,3 @@
-<h1>coucou show flower</h1>
-
 <div class="container">
     <h1><%= @flower.name %></h1>
     <br/>
@@ -7,6 +5,13 @@
     <p><%= @flower.description %></p>
     <br/>
     <p>Prix: <%= @flower.price %>€</p>
+    <br/>
+    <%= form_for @join_table_flower_cart do |f| %>
+            <%= f.hidden_field :flower_id, value: @flower.id %>
+            <%# <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+            <button type="submit" class="btn btn-success">Ajouter au panier</button>
+    <% end %>
+    <br/>
     <br/>
     <a href="<%= edit_flower_path %>" class="btn btn-warning">Modifier</a>
     <br/>

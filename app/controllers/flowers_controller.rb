@@ -10,6 +10,8 @@ class FlowersController < ApplicationController
   end
 
   def show
+    @join_table_flower_cart = JoinTableFlowersCart.new
+
   end
 
   def new

@@ -10,4 +10,6 @@ class JoinTableFlowersCart < ApplicationRecord
   		@new_flower_add.update(quantity: @new_flower_add.quantity + 1)
   	end
   end
+
+
 end

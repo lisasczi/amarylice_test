@@ -1,4 +1,3 @@
-<h1>coucou edit</h1>
 
 <div class="container">
     <br/>
@@ -19,14 +18,7 @@
         <div class="form-group">
         <label class="form-label">Prix de l'article</label>
         <%= f.number_field :price, step: 0.01, class: 'form-control' %>
-         <% if user_signed_in? %>
-                      <%= form_for @join_table_flower_cart do |f| %>
-                          <%= f.hidden_field :flower_id, value: flower.id %>
-                          <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                          <button type="submit" class="btn btn-success">Ajouter au panier</button>
-                        <% end %>
         </div>
-        <% end %>
 
         <div class="form-group">
         <button type="submit" class="btn btn-success">Modifier l'article</button>

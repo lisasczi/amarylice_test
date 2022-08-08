@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "flowers#index"
+  root to: "flowers#home"
+
+  get "about", to: "pages#about"
+  get "service", to: "pages#service"
 
   resources :flowers
 
-  resources :join_table_items_carts, only: [:create, :update, :destroy]
+  resources :join_table_flowers_carts, only: [:create, :update, :destroy]
+  # resources :join_table_flowers_cart
+
   resources :carts, except: [:index, :new, :edit]
 end

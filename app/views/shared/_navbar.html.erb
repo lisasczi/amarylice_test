@@ -8,19 +8,19 @@
       <%# <li class="nav-item active">
         <a class="nav-link" href="<%= root_path >Accueil<span class="sr-only">(current)</span></a>
       </li> %>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-      </li>
+    <span class="navbar-text nav-link">
+    <%= link_to "Notre maison", about_path %>
+    </span>
+    <span class="navbar-text nav-link">
+    <%= link_to "Nos services", service_path %>
+    </span>
+     <span class="navbar-text nav-link">
+    <%= link_to "Boutique en ligne", flowers_path %>
+    </span>
     </ul>
     <% if user_signed_in? %>
     <span class="navbar-text nav-link">
-    <%= link_to "Mon compte", flowers_path %>
-    </span>
-    <span class="navbar-text nav-link">
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%= link_to "Nouvel article", new_flower_path  %>
     </span>
     <span class="navbar-text nav-link">
       <%= link_to "Mon panier", cart_path(current_user.cart.id) %>
@@ -34,6 +34,12 @@
         <% else %>
             <span class="badge badge-pill badge-info">0</span>
           <% end %>
+    </span>
+    <span class="navbar-text nav-link">
+    <%= link_to "Mon compte", flowers_path %>
+    </span>
+    <span class="navbar-text nav-link">
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     </span>
     <% else %>
     <span class="navbar-text nav-link">
