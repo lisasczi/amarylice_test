@@ -1,0 +1,55 @@
+.all_services{
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+}
+
+.services{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.service_card_info{
+  margin: 20px;
+  padding-top: 60px;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  letter-spacing: 2px;
+
+}
+
+.service_card_texte h3{
+  color: #AEBDAC;
+
+}
+
+
+.service_card_photo img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  align-self: auto;
+}
+
+.red-btn a{
+  color: #AEBDAC;
+  border: 2px solid #AEBDAC;
+  padding: 8px 24px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.red-btn a:hover{
+  color: white;
+  background-color: rgb(238, 121, 121);
+  border: 2px solid rgb(238, 121, 121);
+  padding: 8px 24px;
+  font-size: 20px;
+  font-weight: bold;
+}
