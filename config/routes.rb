@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "service", to: "pages#service"
   get "abonnement", to: "pages#abonnement"
+  get "wedding", to: "pages#wedding"
 
   resources :flowers
 
