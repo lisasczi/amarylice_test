@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get "service", to: "pages#service"
   get "abonnement", to: "pages#abonnement"
   get "wedding", to: "pages#wedding"
+  get "event", to: "pages#event"
+  get "vegetal", to: "pages#vegetal"
+  get "deco", to: "pages#deco"
+  get "noel", to: "pages#noel"
+  get "contact", to: "pages#contact"
 
   resources :flowers
 

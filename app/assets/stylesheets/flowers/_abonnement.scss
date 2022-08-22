@@ -20,6 +20,17 @@
   margin-bottom: 16px;
 }
 
+.two-shared-photos {
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+  margin-bottom: 16px;
+}
+
 
 .three-photos{
   position: static;
