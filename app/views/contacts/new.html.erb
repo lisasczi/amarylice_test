@@ -1,0 +1,43 @@
+  <h1 class="main_title">DISCUTONS !</h1>
+
+  <div class="container">
+
+   <div class="contact_services">
+        <div class="contact_card_info">
+          <div class="contact_card_texte">
+            <h6>Si vous avez des questions ou des demandes spéciales, n'hésitez pas à nous contacter ou à remplir ce formulaire.</h6>
+            <p>AMARYLICE</p>
+            <p>20 quai Gailleton</p>
+            <p>69002 LYON</p>
+            <p>Tél : 04 78 37 38 29</p>
+            <p>E-mail : info@amarylice.com</p>
+          </div>
+        </div>
+
+        <div class="form-contact">
+            <%= form_for @contact do |f| %>
+              <div class="contact">
+                <br>
+                <%= f.text_field  :name, required: true, placeholder: "Nom complet", class: "contact-form-text-area" %>
+                <br>
+                <br>
+                <%= f.text_field :email, required: true, placeholder: "Adresse mail", class: "contact-form-text-area" %>
+                <br>
+                <br>
+                <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                      placeholder: "Ecrivez votre message ici"%>
+                  <br>
+                <%# <div class= "d-none">
+                  <%= f.label :lastname %>
+                  <%# <%= f.text_field :lastname, :hint => 'Leave this field blank!' %>
+                <%# </div>%>
+                <%= f.submit 'Envoyer', class:"form-submit-button" %>
+              </div>
+            <% end %>
+          </div>
+
+      </div>
+     <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11135.274158731987!2d4.8340926!3d45.7547837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf53f2fbce72b!2sAMARYLICE!5e0!3m2!1sfr!2sfr!4v1661258163417!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+</div>

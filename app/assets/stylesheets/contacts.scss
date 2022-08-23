@@ -1,0 +1,82 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.contact_card_texte h6{
+  color: #424242;
+  padding-top: 4vw;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 4vw;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.contact_card_texte p{
+  color: #AEBDAC;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.contact_services{
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+}
+.form-contact{
+  background-image: url('home.jpg');
+  opacity: 0.7;
+  filter: sepia(40%);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #424242;
+  padding: 40px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.contact{
+  text-align: center;
+}
+
+.form-submit-button {
+  color: #424242;
+  border: 5px solid #424242;
+  // padding: 8px 24px;
+  margin-top: 24px;
+  // font-size: 20px;
+  // margin-left: 12vw;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-weight: bold;
+}
+
+.map{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#msg-text{
+  color: #424242;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.image_contact img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

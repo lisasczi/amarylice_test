@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get "vegetal", to: "pages#vegetal"
   get "deco", to: "pages#deco"
   get "noel", to: "pages#noel"
-  get "contact", to: "pages#contact"
 
   resources :flowers
 
@@ -21,4 +20,5 @@ Rails.application.routes.draw do
   # resources :join_table_flowers_cart
 
   resources :carts, except: [:index, :new, :edit]
+  resources :contacts, only: [:new, :create]
 end

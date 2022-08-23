@@ -16,6 +16,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render 'shared/navbar' %>
+    <div class="container">
+        <br>
+        <% flash.each do |key, message| %>
+          <p class="alert alert-<%= key %>"><%= message %></p>
+        <% end %>
+      </div>
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
