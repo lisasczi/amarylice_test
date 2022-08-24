@@ -7,3 +7,54 @@
   letter-spacing: 2px;
   word-spacing: 4px;
 }
+
+
+.four-green-btn{
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  grid-gap: 16px;
+  margin-top: 36px;
+}
+
+.three-green-btn{
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  grid-gap: 16px;
+  margin-top: 36px;
+}
+
+.green-btn a{
+  color:#AEBDAC;
+  background-color: white;
+  border: 5px solid  #AEBDAC;
+  padding: 8px 24px;
+  margin-top: 24px;
+  font-size: 20px;
+  // margin-left: 12vw;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-weight: bold;
+}
+
+.green-btn a:hover{
+  color:white;
+  background-color: #AEBDAC;
+  border: 5px solid  #AEBDAC;
+  padding: 8px 24px;
+  margin-top: 24px;
+  font-size: 20px;
+  // margin-left: 12vw;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-weight: bold;
+}

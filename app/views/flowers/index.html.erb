@@ -1,35 +1,49 @@
-  <br/>
-  <br/>
-<div class="container">
-    <h1>Toutes nos fleurs :</h1>
-    <br/>
-    <%# <a href="<%= new_flower_path " type="button" class="btn btn-primary">Creer un nouvel article</a> %>
-    <br/>
-    <br/>
-  <div class="all-flowers">
-      <% @flowers.each do |flower| %>
-          <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                  <%# <h5 class="card-title"><%= flower.name </h5> %>
-                  <%= cl_image_tag flower.image.key %>
-                  <a href="<%= flower_path(flower.id) %>" class="card-link"><h5 class="card-title"><%= flower.name %></h5></a>
-                  <%# <p class="card-text"><%= flower.description </p> %>
-                  <p class="card-text"><%= flower.price %>€</p>
-                  <% if user_signed_in? %>
-                        <%= form_for @join_table_flower_cart do |f| %>
-                            <%= f.hidden_field :flower_id, value: flower.id %>
-                            <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                            <button type="submit" class="btn btn-success">Ajouter au panier</button>
-                        <% end %>
-                    <% end %>
-                  <%# <a href="<%= flower_path(flower.id) " class="btn btn-primary">Ajouter au panier</a> %>
-              </div>
-          </div>
-          <br/>
-      <% end %>
-      </div>
-<%# Besoin de précisions ? Des envies ? %>
+  <div class="container">
+      <h1 class= "main_title">NOS FLEURS</h1>
 
-<%# Appelez- nous à la boutique, nous vous conseillerons : 04.78.37.38.29 %>
+        <div class="three-green-btn">
+            <div class="green-btn">
+                <%= link_to "Nos luminaires", flowers_path %>
+            </div>
+            <div class="green-btn">
+                <%= link_to "Objets et vases", flowers_path %>
+            </div>
+            <div class="green-btn">
+                <%= link_to "Ateliers DIY", flowers_path %>
+            </div>
+        </div>
 
-</div>
+          <div class="boutique-text">
+              <h6>Livraison & retrait en magasin</h6>
+            </div>
+      <%# <a href="<%= new_flower_path " type="button" class="btn btn-primary">Creer un nouvel article</a> %>
+      <br/>
+      <br/>
+    <div class="all-flowers">
+        <% @flowers.each do |flower| %>
+            <div class="cards">
+                <div class="card-image">
+                    <%= cl_image_tag flower.image.key, height: 250, width: 250, crop: :fill %>
+                    </div>
+                  <div class="card-body">
+                    <a href="<%= flower_path(flower.id) %>" class="card-link"><h5 class="card-title"><%= flower.name %></h5></a>
+                    <%# <p class="card-text"><%= flower.description </p> %>
+                    <p class="card-text"><%= flower.price %>€</p>
+                    <% if user_signed_in? %>
+                          <%= form_for @join_table_flower_cart do |f| %>
+                              <%= f.hidden_field :flower_id, value: flower.id %>
+                              <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                              <button type="submit" class="btn btn-success">Ajouter au panier</button>
+                          <% end %>
+                      <% end %>
+                    <%# <a href="<%= flower_path(flower.id) " class="btn btn-primary">Ajouter au panier</a> %>
+                </div>
+            </div>
+            <br/>
+        <% end %>
+        </div>
+  <%# Besoin de précisions ? Des envies ? %>
+
+  <%# Appelez- nous à la boutique, nous vous conseillerons : 04.78.37.38.29 %>
+
+  </div>
