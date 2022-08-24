@@ -123,13 +123,16 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
-    geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     has_scope (0.8.0)
@@ -307,7 +310,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
-  geocoder
+  dotenv-rails
   inherited_resources!
   jbuilder (~> 2.7)
   listen (~> 3.3)
