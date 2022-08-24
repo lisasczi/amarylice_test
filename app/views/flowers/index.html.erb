@@ -11,8 +11,9 @@
           <div class="card" style="width: 18rem;">
               <div class="card-body">
                   <%# <h5 class="card-title"><%= flower.name </h5> %>
+                  <%= cl_image_tag flower.image.key %>
                   <a href="<%= flower_path(flower.id) %>" class="card-link"><h5 class="card-title"><%= flower.name %></h5></a>
-                  <p class="card-text"><%= flower.description %></p>
+                  <%# <p class="card-text"><%= flower.description </p> %>
                   <p class="card-text"><%= flower.price %>€</p>
                   <% if user_signed_in? %>
                         <%= form_for @join_table_flower_cart do |f| %>
@@ -27,6 +28,8 @@
           <br/>
       <% end %>
       </div>
+<%# Besoin de précisions ? Des envies ? %>
 
+<%# Appelez- nous à la boutique, nous vous conseillerons : 04.78.37.38.29 %>
 
 </div>

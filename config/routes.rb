@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "vegetal", to: "pages#vegetal"
   get "deco", to: "pages#deco"
   get "noel", to: "pages#noel"
+  get "boutique", to: "pages#boutique"
 
   resources :flowers
 

@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 5.2.0'
 gem 'mail_form'
-gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -35,6 +35,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "dotenv-rails"
 end
 
 group :development do
