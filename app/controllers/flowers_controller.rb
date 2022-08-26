@@ -11,11 +11,6 @@ class FlowersController < ApplicationController
 
   def show
     @join_table_flower_cart = JoinTableFlowersCart.new
-    # if current_user == nil
-    #   redirect_to new_user_session_path
-    # else
-    #   render
-    # end
   end
 
   def new

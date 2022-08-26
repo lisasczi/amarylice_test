@@ -22,19 +22,19 @@
     <div class="all-flowers">
         <% @flowers.each do |flower| %>
             <div class="cards">
-                <div class="card-image">
+                <div class="card-body">
+                  <%= link_to flower_path(flower.id) do %>
                     <%= cl_image_tag flower.image.key, height: 250, width: 250, crop: :fill %>
-                    </div>
-                  <div class="card-body">
-                    <a href="<%= flower_path(flower.id) %>" class="card-link"><h5 class="card-title"><%= flower.name %></h5></a>
-                    <%# <p class="card-text"><%= flower.description </p> %>
-                    <p class="card-text"><%= flower.price %>€</p>
-
-                    <%# <a href="<%= flower_path(flower.id) " class="btn btn-primary">Ajouter au panier</a> %>
+                    <a href="<%= flower_path(flower.id) %>"><h5><%= flower.name %></h5></a>
+                    <% end %>
                 </div>
             </div>
             <br/>
-        <% end %>
-        </div>
+          <% end %>
+      </div>
+
+     <div class="boutique-text">
+        <h6>Pour toute demande particulière, appelez notre boutique : 04.78.37.38.29</h6>
+      </div>
 
   </div>

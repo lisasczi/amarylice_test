@@ -3,31 +3,33 @@
   <p><a href="<%= root_path %>" class="btn-accueil">Accueil</a> / <a href="<%= flowers_path %>" class="btn-accueil">Fleurs</a> / <%= @flower.name %></p>
 
   <div class="home_services">
-      <div class="home_card_photo">
-        <%= cl_image_tag @flower.image.key %>
-        </div>
-      <div class="home_card_info">
-          <h1><%= @flower.name %></h1>
-          <br/>
-          <p><%= @flower.description %></p>
-          <br/>
-          <p>Prix: <%= @flower.price %>€</p>
-          <br/>
-              <% if user_signed_in? %>
-                  <%= form_for @join_table_flower_cart do |f| %>
-                      <%= f.hidden_field :flower_id, value: @flower.id %>
-                      <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                      <button type="submit" class="validate-btn">Ajouter au panier</button>
+        <div class="home_card_photo">
+          <%= cl_image_tag @flower.image.key %>
+          </div>
+        <div class="home_card_info">
+          <div class="container">
+              <h1><%= @flower.name %></h1>
+              <br/>
+              <p><%= @flower.description %></p>
+              <br/>
+              <p>Prix: <%= @flower.price %>€</p>
+              <br/>
+                  <% if user_signed_in? %>
+                      <%= form_for @join_table_flower_cart do |f| %>
+                          <%= f.hidden_field :flower_id, value: @flower.id %>
+                          <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                          <button type="submit" class="validate-btn">Ajouter au panier</button>
+                      <% end %>
+                    <% else  %>
+                        <%= link_to "Rajouter au panier", new_user_session_path, class:"validate-btn"%>
                   <% end %>
-                <% else  %>
-                    <%= link_to "Rajouter au panier", new_user_session_path, class:"validate-btn"%>
-              <% end %>
-       </div>
-    </div>
+              </div>
+          </div>
+      </div>
 
     <div class="boutique-text">
-      <h6>Besoin de précisions ? Des envies ?</h6>
-         <h6>Appelez- nous à la boutique, nous vous conseillerons : 04.78.37.38.29</h6>
+      <h6><em>Besoin de précisions ? Des envies ?</em></h6>
+         <h6><em>Appelez-nous à la boutique, nous vous conseillerons : 04.78.37.38.29</em></h6>
     </div>
 
 </div>

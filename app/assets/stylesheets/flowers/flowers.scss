@@ -14,13 +14,13 @@
 
 }
 
-.card-body {
+.card-body h5{
   color: #424242;
-  padding-top: 4vw;
+  padding-top: 16px;
   text-align: center;
   font-size: 16px;
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  // letter-spacing: 2px;
+  // word-spacing: 4px;
 }
 
 .card-image img{
@@ -34,12 +34,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
+// .card-title h5{
+//   text-align: center;
+//   // letter-spacing: 2px;
+//   // word-spacing: 4px;
+//   padding-top: 4px;
+// }
 
 .btn-accueil{
   text-decoration: none !important;
   color: #424242;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.home_card_info{
+  text-align: center;
   letter-spacing: 2px;
   word-spacing: 4px;
 }
