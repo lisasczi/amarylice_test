@@ -29,13 +29,7 @@
                     <a href="<%= flower_path(flower.id) %>" class="card-link"><h5 class="card-title"><%= flower.name %></h5></a>
                     <%# <p class="card-text"><%= flower.description </p> %>
                     <p class="card-text"><%= flower.price %>€</p>
-                    <% if user_signed_in? %>
-                          <%= form_for @join_table_flower_cart do |f| %>
-                              <%= f.hidden_field :flower_id, value: flower.id %>
-                              <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                              <button type="submit" class="btn btn-success">Ajouter au panier</button>
-                          <% end %>
-                      <% end %>
+
                     <%# <a href="<%= flower_path(flower.id) " class="btn btn-primary">Ajouter au panier</a> %>
                 </div>
             </div>

@@ -13,11 +13,15 @@
           <br/>
           <p>Prix: <%= @flower.price %>€</p>
           <br/>
-          <%= form_for @join_table_flower_cart do |f| %>
-                  <%= f.hidden_field :flower_id, value: @flower.id %>
-                  <%# <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                  <button type="submit" class="green-btn">Ajouter au panier</button>
-          <% end %>
+              <% if user_signed_in? %>
+                  <%= form_for @join_table_flower_cart do |f| %>
+                      <%= f.hidden_field :flower_id, value: @flower.id %>
+                      <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                      <button type="submit" class="validate-btn">Ajouter au panier</button>
+                  <% end %>
+                <% else  %>
+                    <%= link_to "Rajouter au panier", new_user_session_path, class:"validate-btn"%>
+              <% end %>
        </div>
     </div>
 
