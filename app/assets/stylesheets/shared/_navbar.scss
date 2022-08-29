@@ -32,8 +32,8 @@ nav a{
 }
 
 nav a:hover{
-  color: orange;
-  border-bottom: 2px solid gold;
+  color: #AEBDAC;
+  // border-bottom: 2px solid #AEBDAC;
 }
 
 .sous{
@@ -61,7 +61,7 @@ nav > ul li:hover .sous{
   background-color: RGBa(200,200,200,0.1);
 }
 .deroulant > a::after{
-  content:" ▼";
+  // content:" ▼";
   font-size: 12px;
 }
 

@@ -8,9 +8,10 @@
         <ul>
           <li class="deroulant"><%= link_to "Notre maison", about_path %>
             <ul class="sous">
-           <li><%= link_to "Notre histoire", about_path %></li>
-            <li><%= link_to "Notre équipe", about_path %></li>
-            <li><%= link_to "Notre référence", about_path %></li>
+           <li><%= link_to "Notre histoire", about_path(:anchor => "histoire") %></li>
+            <li><%= link_to "Notre équipe", about_path(:anchor => "presentation") %></li>
+
+            <li><%= link_to "Notre référence", about_path(:anchor => "confiance") %></li>
               </ul>
           </li>
         </ul>
