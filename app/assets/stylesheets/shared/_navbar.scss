@@ -1,4 +1,4 @@
-.essaie{
+.navbar-icone{
   width: 100%;
   margin: 0 auto;
   background-color: white;
@@ -6,15 +6,13 @@
   flex-direction: row !important;
   justify-content: space-around;
   align-items: stretch;
-  // border-bottom: 1px solid  #8d8888;
 }
 
-.essaie ul{
+.navbar-icone ul{
   list-style-type: none;
 }
 
-.essaie ul li{
-  // float: left;
+.navbar-icone ul li{
   width: 100%;
   text-align: center;
   position: relative;
@@ -23,25 +21,23 @@
   margin-top: 16px;
 }
 
-.essaie ul::after{
+.navbar-icone ul::after{
   content: "";
   display: table;
   clear: both;
 }
 
-.essaie a{
+.navbar-icone a{
   display: block;
   text-decoration: none;
   color:  #424242;
   letter-spacing: 1px;
   word-spacing: 2px;
   border-bottom: 2px solid transparent;
-  // padding: 20px 20px;
 }
 
-.essaie a:hover{
+.navbar-icone a:hover{
   color: #AEBDAC;
-  // border-bottom: 2px solid #AEBDAC;
 }
 
 .sous{
@@ -52,7 +48,7 @@
   width: 200%;
   z-index: 1000;
 }
-.essaie > ul li:hover .sous{
+.navbar-icone > ul li:hover .sous{
   display: block;
 }
 .sous li{
@@ -62,7 +58,6 @@
   position: absolute;
 }
 .sous a{
-  // padding: 10px;
   border-bottom: none;
 }
 .sous a:hover{
@@ -70,7 +65,6 @@
   background-color: RGBa(200,200,200,0.1);
 }
 .deroulant > a::after{
-  // content:" ▼";
   font-size: 12px;
 }
 
