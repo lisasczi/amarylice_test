@@ -1,37 +1,45 @@
-nav{
+.essaie{
   width: 100%;
   margin: 0 auto;
   background-color: white;
-  position: sticky;
-  top: 0px;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+  align-items: stretch;
+  // border-bottom: 1px solid  #8d8888;
 }
 
-nav ul{
+.essaie ul{
   list-style-type: none;
 }
 
-nav ul li{
-  float: left;
-  width: 25%;
+.essaie ul li{
+  // float: left;
+  width: 100%;
   text-align: center;
   position: relative;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-top: 16px;
 }
 
-nav ul::after{
+.essaie ul::after{
   content: "";
   display: table;
   clear: both;
 }
 
-nav a{
+.essaie a{
   display: block;
   text-decoration: none;
-  color: black;
+  color:  #424242;
+  letter-spacing: 1px;
+  word-spacing: 2px;
   border-bottom: 2px solid transparent;
-  padding: 10px 0px;
+  // padding: 20px 20px;
 }
 
-nav a:hover{
+.essaie a:hover{
   color: #AEBDAC;
   // border-bottom: 2px solid #AEBDAC;
 }
@@ -41,19 +49,20 @@ nav a:hover{
   box-shadow: 0px 1px 2px #CCC;
   background-color: white;
   position: absolute;
-  width: 100%;
+  width: 200%;
   z-index: 1000;
 }
-nav > ul li:hover .sous{
+.essaie > ul li:hover .sous{
   display: block;
 }
 .sous li{
   float: none;
   width: 100%;
   text-align: left;
+  position: absolute;
 }
 .sous a{
-  padding: 10px;
+  // padding: 10px;
   border-bottom: none;
 }
 .sous a:hover{
@@ -65,7 +74,13 @@ nav > ul li:hover .sous{
   font-size: 12px;
 }
 
-.conteneur{
-  margin: 50px 20px;
-  height: 1500px;
+.style_logo{
+  margin-bottom: 8px;
+}
+
+nav{
+  border-bottom: 1px solid  #8d8888;
+  position: sticky;
+  top: 0px;
+  background-color: white;
 }
