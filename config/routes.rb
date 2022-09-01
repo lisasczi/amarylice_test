@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   resources :flowers
 
   resources :join_table_flowers_carts, only: [:create, :update, :destroy]
-  # resources :join_table_flowers_cart
 
   resources :carts, except: [:index, :new, :edit]
   resources :contacts, only: [:new, :create]

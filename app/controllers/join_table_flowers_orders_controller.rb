@@ -1,2 +1,5 @@
 class JoinTableFlowersOrdersController < ApplicationController
+
+
+
 end

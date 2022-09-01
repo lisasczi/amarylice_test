@@ -47,7 +47,7 @@ class FlowersController < ApplicationController
   end
 
   def flower_params
-    params.require(:flower).permit(:name, :description, :price, :image)
+    params.require(:flower).permit(:name, :description, :price, :image, :quantity)
   end
 
 end
