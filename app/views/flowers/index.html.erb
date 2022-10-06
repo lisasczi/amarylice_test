@@ -24,7 +24,7 @@
             <div class="cards">
                 <div class="card-body">
                   <%= link_to flower_path(flower.id) do %>
-                    <%= cl_image_tag flower.image.key, height: 250, width: 250, crop: :fill %>
+                    <%= image_tag flower.image, height: 350, width: 350, crop: :fill %>
                     <a href="<%= flower_path(flower.id) %>"><h5><%= flower.name %></h5></a>
                     <% end %>
                 </div>
